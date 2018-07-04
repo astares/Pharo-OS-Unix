@@ -1,1 +1,0 @@
-Instances of this class represent native Unix processes
