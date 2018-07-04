@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TorstenBergmann 12/12/2017 22:03",
+	"super" : "UNIXSpecificTest",
+	"category" : "OS-Unix-Tests-Environment-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "UNIXUserTest",
+	"type" : "normal"
+}

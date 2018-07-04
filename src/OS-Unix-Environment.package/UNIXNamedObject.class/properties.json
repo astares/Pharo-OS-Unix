@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TorstenBergmann 12/12/2017 22:37",
+	"super" : "Object",
+	"category" : "OS-Unix-Environment-Security",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name"
+	],
+	"name" : "UNIXNamedObject",
+	"type" : "normal"
+}

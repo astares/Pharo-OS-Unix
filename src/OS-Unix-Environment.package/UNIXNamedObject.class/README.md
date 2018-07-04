@@ -1,0 +1,1 @@
+Abstract superclass for named objects used in the context of UNIX

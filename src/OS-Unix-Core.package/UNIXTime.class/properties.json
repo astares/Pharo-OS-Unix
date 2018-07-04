@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TorstenBergmann 1/8/2015 23:08",
+	"super" : "FFIExternalStructure",
+	"category" : "OS-Unix-Core-Base",
+	"classinstvars" : [ ],
+	"pools" : [
+		"UNIXConstants"
+	],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "UNIXTime",
+	"type" : "normal"
+}

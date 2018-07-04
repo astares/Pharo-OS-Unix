@@ -1,0 +1,4 @@
+tests
+testAvailableFileSystems
+
+	self assert: UNIXMountedFilesystem availableFileSystems notEmpty

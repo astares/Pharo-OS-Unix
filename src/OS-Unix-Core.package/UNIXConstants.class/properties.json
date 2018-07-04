@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "TorstenBergmann 1/8/2015 23:25",
+	"super" : "SharedPool",
+	"category" : "OS-Unix-Core-Support",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"time_t",
+		"tm"
+	],
+	"instvars" : [ ],
+	"name" : "UNIXConstants",
+	"type" : "normal"
+}

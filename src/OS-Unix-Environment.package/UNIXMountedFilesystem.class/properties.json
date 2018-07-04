@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "TorstenBergmann 3/27/2016 17:08",
+	"super" : "Object",
+	"category" : "OS-Unix-Environment-FileSystem",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"mountPoint",
+		"type",
+		"usedSpace",
+		"availableSpace",
+		"capacity"
+	],
+	"name" : "UNIXMountedFilesystem",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+A class to query various environment settings
