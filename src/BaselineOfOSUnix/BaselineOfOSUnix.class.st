@@ -26,7 +26,7 @@ BaselineOfOSUnix >> baseline: spec [
 		"Groups"
 		spec
 			group: 'Core' with: #(#'OS-Unix-Core' #'OS-Unix-Environment' );
-			group: 'Tests' with: #(#'OS-Unix-Tests-Core' #'OS-Unix-Tests-Environment' );
+			group: 'Tests' with: #(#'OS-Unix-Core-Tests' #'OS-Unix-Environment-Tests' );
 			group: 'Tools' with: #(#'OS-Unix-Tools');
 			group: 'CI' with: #(#'Tests');
 			group: 'all' with: #('Core' 'Tests' 'Tools' );
