@@ -4,7 +4,16 @@
 
 This is a Pharo package written by Torsten Bergmann (astares) to get better support for Unix systems into Pharo.
 
+# Quick Start
 ## Installation
+
+```Smalltalk
+Metacello new 
+	repository: 'github://astares/Pharo-OS-Unix/src';
+	baseline: 'OSUnix';
+	load
+```
+
 
 The package can be loaded from Pharo catalog. Just open the Catalog and search for "OSUnix". It is useful to use this package with Pharo on Unix including Linux derivates and Mac.
 
