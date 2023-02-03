@@ -7,20 +7,20 @@ Class {
 	#pools : [
 		'UNIXConstants'
 	],
-	#category : 'OS-Unix-Core-Base'
+	#category : #'OS-Unix-Core-Base'
 }
 
 { #category : #'private - primitives' }
-UNIXTime class >> asctime: timeptr [	
+UNIXTime class >> asctime: timeptr [
 
-	 ^ self ffiCall: #(char* asctime(tm* timeptr) ) 
+	 ^ self ffiCall: #(char* asctime(tm* timeptr) )
 			  module: LibC
 ]
 
 { #category : #'private - primitives' }
 UNIXTime class >> ctime: t [
-	
-	 ^ self ffiCall: #(char* ctime(time_t* t) ) 
+
+	 ^ self ffiCall: #(char* ctime(time_t* t) )
 			  module: LibC
 ]
 
@@ -48,8 +48,8 @@ UNIXTime class >> fieldsDesc [
 
 { #category : #'private - primitives' }
 UNIXTime class >> getTime: t [
-	
-	 ^self ffiCall: #(time_t time(time_t* t) ) 
+
+	 ^self ffiCall: #(time_t time(time_t* t) )
 			 module: LibC
 			 options: #(+ optCoerceNilToNull)
 ]
@@ -61,9 +61,9 @@ UNIXTime class >> localTime [
 ]
 
 { #category : #'private - primitives' }
-UNIXTime class >> localTime: time [	
-		
-	 ^ self ffiCall: #(tm* localtime(time_t* time) ) 
+UNIXTime class >> localTime: time [
+
+	 ^ self ffiCall: #(tm* localtime(time_t* time) )
 			  module: LibC
 ]
 
@@ -88,21 +88,21 @@ UNIXTime >> hour [
 { #category : #testing }
 UNIXTime >> isDaylightSavingTimeInEffect [
 	"Return true if the daylight savings time is in effect, false otherwise"
-	
+
 	 ^self tm_isdst > 0
 ]
 
 { #category : #testing }
 UNIXTime >> isDaylightSavingTimeInfoUnavailable [
 	"Return true if the daylight savings time info is not available, false otherwise"
-	
+
 	 ^self tm_isdst < 0
 ]
 
 { #category : #testing }
 UNIXTime >> isDaylightSavingTimeNotInEffect [
 	"Return true if the daylight savings time is not in effect, false otherwise"
-	
+
 	 ^self tm_isdst = 0
 ]
 

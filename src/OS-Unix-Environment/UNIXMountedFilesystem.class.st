@@ -12,25 +12,24 @@ Class {
 		'availableSpace',
 		'capacity'
 	],
-	#category : 'OS-Unix-Environment-FileSystem'
+	#category : #'OS-Unix-Environment-FileSystem'
 }
 
 { #category : #accessing }
 UNIXMountedFilesystem class >> availableFileSystems [
 	"Query infos about file system by using the disk filesystem command with POSIX formatting option"
-	
-	<script: 'self availableFileSystems inspect'> 	
+
+	<script: 'self availableFileSystems inspect'>
 	|coll|
-	coll := (UNIXProcess resultOfCommand: 'df -P -T') lines allButFirst 
-				collect: [:line | 					
+	coll := (UNIXProcess resultOfCommand: 'df -P -T') lines allButFirst
+				collect: [:line |
 					self newInstanceFromDFInfos: (line findTokens: (Character space))].
-	^coll			
-	
+	^coll
 ]
 
 { #category : #'private - instance creation' }
 UNIXMountedFilesystem class >> newInstanceFromDFInfos: aCollection [
- 
+
 	 ^(self new)
 			name: aCollection first;
 			type: aCollection second;
@@ -73,7 +72,7 @@ UNIXMountedFilesystem >> mountPoint: anObject [
 ]
 
 { #category : #accessing }
-UNIXMountedFilesystem >> name [ 
+UNIXMountedFilesystem >> name [
 	^ name
 ]
 
@@ -86,7 +85,7 @@ UNIXMountedFilesystem >> name: anObject [
 UNIXMountedFilesystem >> printOn: aStream [
 
 	self name storeOn: aStream.
-	aStream 
+	aStream
 		nextPutAll: ' (';
 		nextPutAll: capacity asString;
 		nextPut: $)

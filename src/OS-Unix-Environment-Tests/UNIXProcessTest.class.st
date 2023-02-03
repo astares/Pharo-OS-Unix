@@ -10,11 +10,11 @@ Class {
 { #category : #tests }
 UNIXProcessTest >> testCurrentProcessID [
 
-	self assert: UNIXProcess currentProcessId > 0 
+	self assert: UNIXProcess currentProcessId > 0
 ]
 
 { #category : #tests }
 UNIXProcessTest >> testParentProcessID [
 
-	self assert: UNIXProcess parentProcessId > 0 
+	self assert: UNIXProcess parentProcessId > 0
 ]

@@ -46,17 +46,17 @@ UNIXUserTest >> testRootHasUIDZero [
 { #category : #tests }
 UNIXUserTest >> testRootHomeDirectory [
 	| expected |
-	expected := Smalltalk os isUnix 
-						ifTrue: [ '/root' ] 
+	expected := Smalltalk os isUnix
+						ifTrue: [ '/root' ]
 						ifFalse: [ '/var/root' ]. "Mac"
-	self assert: UNIXUser root homeDirectory = expected
+	self assert: UNIXUser root homeDirectory equals: expected
 ]
 
 { #category : #tests }
 UNIXUserTest >> testRootIsInRootOrAdminGroup [
 	| expected |
-	expected := Smalltalk os isUnix 
-						ifTrue: [ 'root' ] 
+	expected := Smalltalk os isUnix
+						ifTrue: [ 'root' ]
 						ifFalse: [ 'admin' ]. "Mac"
 	self assert: (UNIXUser root groups includes: expected)
 ]

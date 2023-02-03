@@ -4,7 +4,7 @@ The unix system
 Class {
 	#name : #UNIXSystem,
 	#superclass : #Object,
-	#category : 'OS-Unix-Core-Base'
+	#category : #'OS-Unix-Core-Base'
 }
 
 { #category : #'private - utilities' }
@@ -15,13 +15,13 @@ UNIXSystem class >> contentsOf: fileName [
 
 { #category : #primitives }
 UNIXSystem class >> system: command [
-	
-	 ^ self ffiCall: #(int system(char* command) ) 
+
+	 ^ self ffiCall: #(int system(char* command) )
 			  module: LibC
 ]
 
 { #category : #accessing }
 UNIXSystem class >> upTime [
 
-	^ self contentsOf: '/proc/uptime/' 
+	^ self contentsOf: '/proc/uptime/'
 ]

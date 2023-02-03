@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'uid'
 	],
-	#category : 'OS-Unix-Environment-Security'
+	#category : #'OS-Unix-Environment-Security'
 }
 
 { #category : #accessing }
@@ -16,7 +16,7 @@ UNIXUser class >> allUsers [
 	| all |
 	all := OrderedCollection new.
 	(UNIXProcess resultOfCommand: 'cut -d: -f1 /etc/passwd')
-		linesDo: [ :each | (each beginsWith: '#') 
+		linesDo: [ :each | (each beginsWith: '#')
 				ifFalse: [ all add: (self named: each) ]].
 	^ all
 ]
@@ -24,14 +24,14 @@ UNIXUser class >> allUsers [
 { #category : #defaults }
 UNIXUser class >> current [
 	"Return the current user the Pharo process is running in"
-	
+
 	^self named: (UNIXProcess resultOfCommand: 'whoami')
 ]
 
 { #category : #'private - utilities' }
 UNIXUser class >> groupsForUser: aUserName [
 	"Return the groups for the given username."
-	
+
 	|res|
 	res := UNIXProcess resultOfCommand: 'groups ', aUserName. "On Mac this is already enough"
    Smalltalk os isUnix ifTrue: [ res := (res substrings: ':') second ]. "... on Unix we have to adjust"
@@ -47,7 +47,7 @@ UNIXUser class >> root [
 { #category : #'private - utilities' }
 UNIXUser class >> userIDForUser: aUserName [
 	"Return the UID for the given username."
-	
+
 	^(UNIXProcess resultOfCommand: 'id -u ', aUserName) asNumber
 ]
 
@@ -66,10 +66,9 @@ UNIXUser >> homeDirectory [
 { #category : #initialization }
 UNIXUser >> initFromName: aName [
 	"Initializes the receiver from the given name"
-	
+
 	super initFromName: aName.
 	uid := self class userIDForUser: aName
-	
 ]
 
 { #category : #testing }
@@ -81,16 +80,16 @@ UNIXUser >> isRoot [
 { #category : #printing }
 UNIXUser >> printOn: aStream [
 
-	aStream 
+	aStream
 		nextPutAll: self name;
 		nextPutAll: '(uid=';
-		nextPutAll: self uid asString;	
+		nextPutAll: self uid asString;
 		nextPut: $)
 ]
 
 { #category : #accessing }
 UNIXUser >> uid [
 	"Returns the users UID"
-	
+
 	^uid
 ]

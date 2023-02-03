@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'name'
 	],
-	#category : 'OS-Unix-Environment-Security'
+	#category : #'OS-Unix-Environment-Security'
 }
 
 { #category : #'instance creation' }
@@ -27,7 +27,7 @@ UNIXNamedObject >> = anotherUser [
 { #category : #initialization }
 UNIXNamedObject >> initFromName: aName [
 	"Initializes the receiver from the given name"
-	
+
 	name := aName
 ]
 
