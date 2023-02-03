@@ -4,7 +4,7 @@ Unit test for UNIXUser
 Class {
 	#name : #UNIXUserTest,
 	#superclass : #UNIXSpecificTest,
-	#category : 'OS-Unix-Tests-Environment-Security'
+	#category : #'OS-Unix-Environment-Tests-Security'
 }
 
 { #category : #tests }

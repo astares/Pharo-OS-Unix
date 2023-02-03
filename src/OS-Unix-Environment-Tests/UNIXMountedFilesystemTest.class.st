@@ -4,7 +4,7 @@ A test for UNIXMountedFilesystem
 Class {
 	#name : #UNIXMountedFilesystemTest,
 	#superclass : #UNIXSpecificTest,
-	#category : 'OS-Unix-Tests-Environment-FileSystem'
+	#category : #'OS-Unix-Environment-Tests-FileSystem'
 }
 
 { #category : #tests }

@@ -4,7 +4,7 @@ Unit test for UNIXProcess
 Class {
 	#name : #UNIXProcessTest,
 	#superclass : #UNIXSpecificTest,
-	#category : 'OS-Unix-Tests-Environment-Processing'
+	#category : #'OS-Unix-Environment-Tests-Processing'
 }
 
 { #category : #tests }

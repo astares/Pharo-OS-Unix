@@ -4,7 +4,7 @@ Subclasses represent tests that only run on Unix operating systems
 Class {
 	#name : #UNIXSpecificTest,
 	#superclass : #TestCase,
-	#category : 'OS-Unix-Tests-Core-Common'
+	#category : #'OS-Unix-Core-Tests-Common'
 }
 
 { #category : #testing }

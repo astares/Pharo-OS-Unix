@@ -4,7 +4,7 @@ Unit test for UNIXEnvironment
 Class {
 	#name : #UNIXEnvironmentTest,
 	#superclass : #UNIXSpecificTest,
-	#category : 'OS-Unix-Tests-Environment-Environment'
+	#category : #'OS-Unix-Environment-Tests-Environment'
 }
 
 { #category : #tests }

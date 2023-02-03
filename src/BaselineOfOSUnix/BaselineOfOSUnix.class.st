@@ -4,28 +4,31 @@ Baseline for OS Unix support
 Class {
 	#name : #BaselineOfOSUnix,
 	#superclass : #BaselineOf,
-	#category : 'BaselineOfOSUnix'
+	#category : #BaselineOfOSUnix
 }
 
-{ #category : #baseline }
+{ #category : #baselines }
 BaselineOfOSUnix >> baseline: spec [
 	<baseline>
 
 	spec for: #'common' do: [
-		spec 
+		"Packages"
+		spec
 			package: #'OS-Unix-Core';
-			package: #'OS-Unix-Environment' with: [
-				spec requires: #(#'OS-Unix-Core' ). ];
-			package: #'OS-Unix-Tools' with: [
-				spec requires: #(#'OS-Unix-Core' 'OS-Unix-Environment'). ];
-			package: #'OS-Unix-Tests-Core' with: [
-				spec requires: #(#'OS-Unix-Core' ). ];
-			package: #'OS-Unix-Tests-Environment' with: [
-				spec requires: #(#'OS-Unix-Environment' #'OS-Unix-Tests-Core' ). ].
-		spec 
+			package: #'OS-Unix-Core-Tests' with: [ spec requires: #(#'OS-Unix-Core' ) ];
+
+			package: #'OS-Unix-Environment' with: [ spec requires: #(#'OS-Unix-Core' ) ];
+			package: #'OS-Unix-Environment-Tests' with: [
+				spec requires: #(#'OS-Unix-Environment' #'OS-Unix-Core-Tests' ) ];
+
+			package: #'OS-Unix-Tools' with: [ spec requires: #(#'OS-Unix-Core' 'OS-Unix-Environment') ].
+
+		"Groups"
+		spec
 			group: 'Core' with: #(#'OS-Unix-Core' #'OS-Unix-Environment' );
 			group: 'Tests' with: #(#'OS-Unix-Tests-Core' #'OS-Unix-Tests-Environment' );
-			group: 'Tools' with: #(#'OS-Unix-Tools'  );
-			group: 'default' with: #('Core' 'Tests' 'Tools' ). ].
-
+			group: 'Tools' with: #(#'OS-Unix-Tools');
+			group: 'CI' with: #(#'Tests');
+			group: 'all' with: #('Core' 'Tests' 'Tools' );
+			group: 'default' with: #('all') ]
 ]
