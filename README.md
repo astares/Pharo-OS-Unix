@@ -1,7 +1,5 @@
 # Pharo-OS-Unix
 
-Migrated from http://smalltalkhub.com/#!/~OS/OS-Unix
-
 ## Introduction 
 
 This is a Pharo package written by Torsten Bergmann (astares) to get better support for Unix systems into Pharo.
@@ -48,9 +46,13 @@ UNIXUser allUsers
 or
 
 ```Smalltalk
-    UNIXGroup allGroups
+UNIXGroup allGroups
 ```
 
 ### Browsing UNIX man pages in Pharo
 
 When the package is loaded it is possible to open the Pharo spotter and enter a unix command. If there is a UNIX man page then Pharo will display it and you can directly show it within the Pharo environment.
+
+# History
+
+Migrated from http://smalltalkhub.com/#!/~OS/OS-Unix
