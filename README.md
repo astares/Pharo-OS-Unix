@@ -4,7 +4,7 @@
 
 This is a Pharo package written by Torsten Bergmann (astares) to get better support for Unix systems into Pharo.
 
-[![Unit Tests](https://github.com/astares/Pharo-OS-Unix/workflows/Unit%20Tests/badge.svg?branch=master)](https://github.com/astares/Pharo-OS-Unix/actions?query=workflow%3AUnit%20Tests)
+[![Unit Tests](https://github.com/astares/Pharo-OS-Unix/workflows/Build/badge.svg?branch=master)](https://github.com/astares/Pharo-OS-Unix/actions?query=workflow%3Build)
 [![Coverage Status](https://codecov.io/github/astares/Pharo-OS-Unix/coverage.svg?branch=master)](https://codecov.io/gh/astares/Pharo-OS-Unix/branch/master)
 
 [![Pharo 7](https://img.shields.io/badge/Pharo-7.0-%23aac9ff.svg)](https://pharo.org/download)
